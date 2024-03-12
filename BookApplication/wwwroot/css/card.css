@@ -1,0 +1,16 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.card{
+height: 400px;
+width: 500px;
+background-color: rgba(242, 245, 53, 0.315);
+color: rgb(49, 40, 40);
+padding: 0 40px;
+}

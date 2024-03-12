@@ -1,0 +1,19 @@
+.hero{
+    height: 70%;
+    width: 100%;
+    background-color: black;
+    color: rgb(211, 90, 90);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.card{
+    height: 50%;
+    width: 25%;
+   border: 2px solid rgba(127, 255, 212, 0.555);
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
