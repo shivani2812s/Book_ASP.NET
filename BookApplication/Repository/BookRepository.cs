@@ -1,18 +1,61 @@
-﻿using BookApplication.NewFolder2;
+﻿using BookApplication.Data;
+using BookApplication.NewFolder2;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Linq;
 
 namespace BookApplication.NewFolder3
 {
     public class BookRepository
     {
-
-        public List<BookModel> GetAllBooks()
+        private readonly BookStoreContext _context;
+        public BookRepository(BookStoreContext context)
         {
-            return DataSource();
+            _context = context;
         }
-        public BookModel GetBookById(int id)
+        public async Task<int> ADDbook(BookModel model)
         {
-            return DataSource().Where(x => x.Id == id).FirstOrDefault();
+            var newbook = new Books()
+            {
+                Title = model.Title,
+                Author = model.Author,
+            };
+           await _context.Books.AddAsync(newbook);
+          await  _context.SaveChangesAsync(); 
+            return newbook.Id;
+        }
+
+        public async Task< List<BookModel>> GetAllBooks()
+        {
+            var books = new List<BookModel>();
+            var allBooks = await _context.Books.ToListAsync();
+            if (allBooks != null)
+            {
+                foreach (var book in allBooks)
+                {
+                    books.Add(new BookModel()
+                    {
+                        Title = book.Title,
+                        Author = book.Author
+                    });
+                }
+            }
+            return books;
+        }
+        public async Task<BookModel> GetBookById(int id)
+        {
+            var book = await _context.Books.SingleOrDefaultAsync(b => b.Id == id);
+            if (book != null)
+            {
+                var bookModel = new BookModel
+                {
+                    Id = book.Id,
+                    Title = book.Title,
+                    Author = book.Author
+                };
+                return bookModel;
+            }
+            return null;
         }
         public List<BookModel> SearchBook(string bookname,string authorname)
         {

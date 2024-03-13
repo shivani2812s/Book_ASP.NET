@@ -8,19 +8,19 @@ namespace BookApplication.NewFolder
     {
         private readonly BookRepository repository;
 
-        public BookController() { 
-            repository = new BookRepository();
+        public BookController(BookRepository bookRepository) { 
+            repository = bookRepository;
         }
 
-        public ViewResult getallbooks()
+        public async Task<ViewResult> getallbooks()
         {
-            var data= repository.GetAllBooks();
+            var data= await  repository.GetAllBooks();
             return View(data);
         }
 
-        public ViewResult Book(int id)
+        public  async Task<ViewResult> Book(int id)
         {
-            var data= repository.GetBookById(id);
+            var data=await repository.GetBookById(id);
              return View(data);
 
         }
@@ -29,5 +29,22 @@ namespace BookApplication.NewFolder
         {
             return repository.SearchBook(Title, author);
         }
+        public ViewResult AddBook(bool isSuccess=false,int bookid=0){
+            ViewBag.IsSuccess = isSuccess;
+            ViewBag.BookId = bookid;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddBook(BookModel model)
+        {
+            int id=await repository.ADDbook(model);
+            if(id>0)
+            {
+                return RedirectToAction(nameof(AddBook), new { isSuccess =true,bookId=id});
+            }
+            return View(); 
+        }
+
     }
 }

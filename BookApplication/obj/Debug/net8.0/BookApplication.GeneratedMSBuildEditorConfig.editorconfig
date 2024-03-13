@@ -9,27 +9,31 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookApplication
 build_property.RootNamespace = BookApplication
-build_property.ProjectDir = c:\Users\CS\Desktop\dotnet_Projects\BookApplication\BookApplication\BookApplication\
+build_property.ProjectDir = C:\Users\CS\Desktop\dotnet_Projects\BookApplication\BookApplication\BookApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\Users\CS\Desktop\dotnet_Projects\BookApplication\BookApplication\BookApplication
+build_property.MSBuildProjectDirectory = C:\Users\CS\Desktop\dotnet_Projects\BookApplication\BookApplication\BookApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Book/Book.cshtml]
+[C:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Book/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xBZGRCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Book/Book.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Book/GetAllBooks.cshtml]
+[C:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Book/GetAllBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRBbGxCb29rcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Home/AboutUs.cshtml]
+[C:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Home/Index.cshtml]
+[C:/Users/CS/Desktop/dotnet_Projects/BookApplication/BookApplication/BookApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

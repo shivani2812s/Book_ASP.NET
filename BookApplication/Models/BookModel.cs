@@ -1,4 +1,6 @@
-﻿namespace BookApplication.NewFolder2
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BookApplication.NewFolder2
 {
     public class BookModel
     {
